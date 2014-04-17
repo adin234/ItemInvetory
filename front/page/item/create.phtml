@@ -1,0 +1,45 @@
+<div class="container">
+	<form class="form-horizontal" method="POST" enctype="multipart/form-data">
+	    <fieldset>
+	        <!-- Form Name -->
+	        <legend>Create Item</legend> <!-- Text input-->
+
+	        <div class="form-group">
+	            <label class="col-md-4 control-label" for=
+	            "item_name">Name</label>
+
+	            <div class="col-md-6">
+	                <input class="form-control input-md" id="item_name" name=
+	                "item_name" placeholder="Item Name" required="" type=
+	                "text">
+	            </div>
+	        </div><!-- Text input-->
+
+	        <div class="form-group">
+	            <label class="col-md-4 control-label" for=
+	            "item_serial">Id</label>
+
+	            <div class="col-md-6">
+	                <input class="form-control input-md" id="item_serial" name=
+	                "item_serial" placeholder="Unique Id" required="" type=
+	                "text">
+	            </div>
+	        </div><!-- Button -->
+
+			<!-- File Button --> 
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="item_photo">Image</label>
+				<div class="col-md-4">
+					<input id="item_photo" name="item_photo" class="input-file" type="file">
+				</div>
+			</div>
+
+	        <div class="form-group">
+	            <div class="col-md-offset-4 col-md-6">
+	                <button class="btn btn-primary" id="submit" name=
+	                "submit">Submit</button>
+	            </div>
+	        </div>
+	    </fieldset>
+	</form>
+</div>
