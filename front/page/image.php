@@ -29,15 +29,10 @@ class Front_Page_Image extends Front_Page {
 		$type		= front()->registry()->get('request', 'variables', 0);
 		$uploadsDir = front()->registry()->get('path', 'uploads');
 		$item 		= $database->search($type)->addFilter($type.'_id='.$id)->getRow();
-		$index		= array(
-			'item' 	=> 'item_image',
-			'user'	=> 'user_photo'
-		);
-
-		$ext 		= explode('.', $item[$index[$type]]);
+		$ext 		= explode('.', $item[$type.'_image']);
 		$ext 		= $ext[count($ext)-1];
 		header('Content-type: image/'.$ext);
-		die(file_get_contents($uploadsDir.'/'.$item[$index[$type]]));
+		die(file_get_contents($uploadsDir.'/'.$item[$type.'_image']));
 		exit;
 	}
 	

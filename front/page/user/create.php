@@ -35,7 +35,7 @@ class Front_Page_User_Create extends Front_Page {
 			if($_FILES['user_photo']['size']) {
 				$filename = uniqid().$_FILES['user_photo']['name'];
 				move_uploaded_file($_FILES['user_photo']['tmp_name'], $uploadsDir.'/'.$filename);
-				$_POST['user_photo']	= $filename;
+				$_POST['user_image']	= $filename;
 			}
 
 			$database->model($_POST)->save('user');

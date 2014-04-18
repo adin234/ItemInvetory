@@ -66,7 +66,7 @@
 						<label class="col-md-3 control-label" for="user_photo">Image</label>
 						<div class="col-md-8">
 							<input id="user_photo" name="user_photo" class="input-file" type="file">
-							<?php if(strlen($user['user_photo'])) : ?>	
+							<?php if(strlen($user['user_image'])) : ?>	
 								<img style="margin-top: 10px" src="/image/user/<?php echo $user['user_id']; ?>" height="75"/>
 							<?php endif; ?>
 						</div>

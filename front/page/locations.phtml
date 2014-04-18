@@ -1,0 +1,36 @@
+<div class="container">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Image</th>
+				<th>Name</th>
+				<th>Serial</th>
+				<th>Address</th>
+				<th>Created</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach($locations as $location): ?>
+				<tr>
+					<td><?php if(strlen($location['location_image'])) : 
+					?>	<img src="/image/location/<?php echo $location['location_id']; ?>" height="50"/> <?php
+						endif;
+					?></td>
+					<td><?php echo $location['location_name']; ?></td>
+					<td><?php echo $location['location_serial']; ?></td>
+					<td><?php echo nl2br($location['location_address']); ?></td>
+					<td><?php echo $location['location_created']; ?></td>
+					<td>
+						<a href="/location/edit/<?php echo $location['location_id']; ?>" class="btn btn-primary">
+							<i class="fa fa-edit"></i>
+						</a>
+						<a href="?delete=<?php echo $location['location_id']; ?>" class="btn btn-danger">
+							<i class="fa fa-trash-o"></i>
+						</a>
+					</td>
+				</tr>
+			<?php endforeach; ?>
+		</tbody>
+	</table>
+</div>
